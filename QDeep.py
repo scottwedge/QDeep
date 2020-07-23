@@ -176,7 +176,7 @@ class QDeep():
         #-------validate sequence file-----------#
         #Invalid if the file does not exist
         #Invalid if the file is empty
-        #Invalid if the sequence cotains any digit
+        #Invalid if the sequence contains any digit
         def validate_seq(self, seq_file):
                 if(os.path.exists(seq_file)):
                         f = open(seq_file, 'r')
@@ -423,7 +423,7 @@ class QDeep():
                 ros_proc = subprocess.Popen('python -W ignore ' + ros_script + ' -d ' + decoy_dir +
                                   ' -o ' + output_path + "/rosetta > " + output_path + "/rosetta.log", shell=True).wait()
                 if(ros_proc != 0):
-                    print('Error occured while generating rosetta energy.\n' +
+                    print('Error occurred while generating rosetta energy.\n' +
                               'Please check the installation')
                     exit()
                         
@@ -903,7 +903,7 @@ class QDeep():
                 #---------------for each decoy---------------#
                 #                                            #
                 #--------------------------------------------#
-                #read all deocoys for the taraget
+                #read all decoys for the target
                 self.read_files(decoy_dir)
                 for d in range(len(filesInDir)): #for each decoy
                     outputFeat = open(output_path + "/features/" + filesInDir[d].split('.')[0] + ".feat", "w")

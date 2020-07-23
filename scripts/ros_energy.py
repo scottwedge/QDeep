@@ -150,5 +150,5 @@ for i in range(len(decoys)):
                                               str(per_res_cen_hb_score[k]) + "\n")  
 
                 except Exception as e:
-                        print("Error occured while generating rosetta energy\n" + str(e))
+                        print("Error occurred while generating rosetta energy\n" + str(e))
 
